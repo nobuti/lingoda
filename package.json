@@ -2,9 +2,15 @@
   "name": "@nobuti/lingoda",
   "version": "1.0.0",
   "description": "i18n minimal library",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "build": "rollup -c",
+    "start": "rollup -c -w",
+    "prerelease": "npm run build",
+    "release": "np --yarn=false"
   },
   "keywords": [
     "i18n",
@@ -12,5 +18,21 @@
     "minimal"
   ],
   "author": "nobuti",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^4.1.1",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "@typescript-eslint/parser": "^2.31.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^26.0.1",
+    "np": "^6.2.3",
+    "rollup": "^2.8.2",
+    "tslib": "^1.11.2",
+    "typescript": "^3.8.3"
+  }
 }
