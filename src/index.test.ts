@@ -64,5 +64,6 @@ describe('lingoda', () => {
     lang('fr')
 
     expect(console.warn).toHaveBeenCalledWith("lingoda: locale fr doesn't exist")
+    expect(lang()).toEqual('en')
   })
 })
