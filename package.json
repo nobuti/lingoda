@@ -1,0 +1,16 @@
+{
+  "name": "@nobuti/lingoda",
+  "version": "1.0.0",
+  "description": "i18n minimal library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "i18n",
+    "js",
+    "minimal"
+  ],
+  "author": "nobuti",
+  "license": "MIT"
+}
