@@ -1,19 +1,19 @@
 import { get } from './utils/get'
 import { template } from './utils/template'
 
-type Lingoda = {
-  t: Function
-  set: Function
-  lang: Function
+export type Lingoda = {
+  t: (path: string, data?: object) => string;
+  set: (locale: string, dictionary: object) => void;
+  lang: (locale?: string) => string | void;
 }
 
-type Dictionary = Object | null | undefined
-type Languaje = string | null | undefined
+type Dictionary = object | null | undefined
+type Languaje = string | undefined
 
-let locales:Object = {}
-let locale:string = ''
+let locales: object = {}
+let locale: string = ''
 
-const set = (lang:string, dictionary:Object):void => {
+const set = (lang: string, dictionary: object): void => {
   const l = locales[lang] || {}
   const result = {
     ...l,
@@ -26,20 +26,20 @@ const set = (lang:string, dictionary:Object):void => {
   }
 }
 
-const t = (key:string, data?:object):string => {
-  const value:string = get(locales[locale], key, key)
+const t = (key: string, data?: object): string => {
+  const value: string = get(locales[locale], key, key)
   return data != null ? template(value, data) : value
 }
 
-const lang = (l:Languaje) => {
-  if (l != null) {
+const lang = (l: Languaje) => {
+  if (l) {
     !locales[l] ? console.warn(`lingoda: locale ${l} doesn't exist`) : locale = l
   }
 
   return locale
 }
 
-const lingoda = (dictionary:Dictionary, initial:string):Lingoda => {
+const lingoda = (dictionary: Dictionary, initial: string): Lingoda => {
   locales = { ...dictionary }
   lang(initial)
 

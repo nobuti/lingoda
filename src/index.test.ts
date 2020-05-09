@@ -1,4 +1,5 @@
 import lingoda from './index'
+import type { Lingoda } from './index'
 
 describe('lingoda', () => {
   const locales = {
@@ -15,7 +16,7 @@ describe('lingoda', () => {
     }
   }
 
-  let i18n
+  let i18n: Lingoda
 
   beforeEach(() => {
     i18n = lingoda(locales, 'en')
