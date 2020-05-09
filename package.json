@@ -12,7 +12,7 @@
     "build": "microbundle src/index.ts",
     "start": "microbundle src/index.ts -w",
     "prerelease": "npm run build",
-    "release": "np --yarn=false"
+    "release": "npm publish --access public"
   },
   "keywords": [
     "i18n",
@@ -45,7 +45,6 @@
     "eslint-plugin-standard": "^4.0.1",
     "jest": "^26.0.1",
     "microbundle": "^0.12.0",
-    "np": "^6.2.3",
     "typescript": "^3.8.3"
   }
 }
