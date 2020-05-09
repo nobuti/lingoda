@@ -37,7 +37,7 @@ const locales = {
 }
 
 // initialized
-const {t, lang, set} = lingoda('en', locales)
+const {t, lang, set} = lingoda(locales, 'en')
 
 // change languaje
 lang('es')
