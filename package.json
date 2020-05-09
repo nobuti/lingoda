@@ -1,6 +1,6 @@
 {
   "name": "@nobuti/lingoda",
-  "version": "1.1.0",
+  "version": "1.0.1",
   "description": "i18n minimal library",
   "source": "src/index.ts",
   "main": "dist/index.js",
