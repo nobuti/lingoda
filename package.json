@@ -9,8 +9,8 @@
   "scripts": {
     "test": "jest --watch",
     "ci": "jest",
-    "build": "microbundle",
-    "start": "microbundle watch",
+    "build": "microbundle src/index.ts",
+    "start": "microbundle src/index.ts -w",
     "prerelease": "npm run build",
     "release": "np --yarn=false"
   },
