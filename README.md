@@ -66,3 +66,5 @@ t('footer.tagline'); // 'Hecho con ❤️ por nobuti'
 t('wadus.bogus'); // 'wadus.bogus'
 ```
 
+[Here](https://codesandbox.io/s/lingoda-react-w0cnt) you'll find an example of lingoda integration
+into a React application. In this case, different locales are loaded from json files on demand.
